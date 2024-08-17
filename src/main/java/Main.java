@@ -11,7 +11,7 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
     public static void main(String[] args) throws LoginException {
-        JDA bot = JDABuilder.createDefault("MTI3NDEyMzU0MjY3NzY4NDM1NQ.GaXfYj.MKgUJb9L5o4_ZsHOYmB4_kHlNAeka4oPxzQeZ8").enableIntents(GatewayIntent.MESSAGE_CONTENT).
+        JDA bot = JDABuilder.createDefault("TOKEN_SECRET").enableIntents(GatewayIntent.MESSAGE_CONTENT).
                 setActivity(Activity.playing("Jugando a ser ministro de economia")).addEventListeners(new OnMessageSend(), new OnMessageSendAdmin()).build();
         DataLoader loader = new DataLoader();
         loader.loadFromYaml();
